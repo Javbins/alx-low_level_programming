@@ -1,4 +1,10 @@
 #include <stdio.h>
+/*
+ * File: 9-print_comb.c
+ *
+ * Auth: Javbins
+ *
+ */
 /**
  * main - entry point
  *
@@ -7,18 +13,19 @@
  */
 int main(void)
 {
-	char i;
+	int num;
 
-	for (i = 0; i <= 10; i++)
+	for (num = 0; num <= 9; num++)
 	{
-		if (i == 9)
-			putchar(i + '0');
-		else
-		{
-			putchar(i + '0');
-			putchar(',');
-			putchar(' ');
-		}
+		putchar((num % 10) + '0');
+			if (num == 9)
+				continue;
+
+		putchar(',');
+		putchar(' ');
 	}
+
+	putchar('\n');
+
 	return (0);
 }
